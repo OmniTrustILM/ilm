@@ -1,13 +1,13 @@
-# Contributing to CZERTAINLY
+# Contributing to ILM
 
-We encourage everyone to make contributions to CZERTAINLY platform. You can be a part of the community and improving the security of the internet. Your contribution is important to enhance the platform and make it more affordable and available for all of us using digital certificate.
+We encourage everyone to make contributions to the ILM platform. You can be a part of the community and improving the security of the internet. Your contribution is important to enhance the platform and make it more affordable and available for all of us using digital certificate.
 
-We use [GitHub](https://github.com/) to manage CZERTAINLY project and all source codes, including tracking issues.
+We use [GitHub](https://github.com/) to manage the ILM project and all source codes, including tracking issues.
 
 ## Source code management
 
 [GitHub](https://github.com/) is used as version control system.
-We are trying to use (where possible) the [Vincent Driessen’s "git flow" branching model](https://nvie.com/posts/a-successful-git-branching-model/). It is a git branching and release management workflow that helps us keep track of features, hotfixes and releases in CZERTAINLY projects.
+We use [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) as our branching strategy. Feature branches are created from `main`, and merged back via pull requests after review.
 
 ## Issues
 
