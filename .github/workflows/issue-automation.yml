@@ -38,7 +38,7 @@ jobs:
       # survive the narrowing.
       - name: Generate App token (narrow)
         if: github.event.action == 'opened' || github.event.action == 'reopened'
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v3
         id: token-narrow
         with:
           app-id: ${{ secrets.ILM_PROJECT_BOT_APP_ID }}
@@ -51,7 +51,7 @@ jobs:
       # a different repo than the child).
       - name: Generate App token (broad, for version-propagation)
         if: github.event.action == 'opened'
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v3
         id: token-broad
         with:
           app-id: ${{ secrets.ILM_PROJECT_BOT_APP_ID }}
