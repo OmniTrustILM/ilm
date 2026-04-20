@@ -1,0 +1,83 @@
+name: Issue Automation
+
+# Org-wide issue automation — calls composite actions hosted in
+# OmniTrustILM/.github. Kept in sync by the repo-template-sync workflow.
+#
+# opened:   add issue to Project #5 → set form fields → propagate from parent
+# reopened: post audit comment, clear Reopen Reason field
+#
+# Step-failure semantics: each `opened`-path step is wrapped with
+# `!cancelled()` so a failure in one action does NOT cascade-skip
+# the others. Intentional — the actions are independent from the
+# caller's perspective:
+#   - set-fields and propagate each poll for the project item with
+#     a 10s ceiling and exit 0 with a warning if the item isn't
+#     found, so they work even if `Add to project` failed but the
+#     built-in Project V2 "Auto-add" workflow succeeded.
+#   - A failed step still surfaces in the workflow run (red step),
+#     it just doesn't block its siblings.
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: issue-automation-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Narrow token — scoped to this repo. Used for auto-add, set-fields,
+      # and reopen-tracking. Org-level permissions (organization_projects)
+      # survive the narrowing.
+      - name: Generate App token (narrow)
+        if: github.event.action == 'opened' || github.event.action == 'reopened'
+        uses: actions/create-github-app-token@v1
+        id: token-narrow
+        with:
+          app-id: ${{ secrets.ILM_PROJECT_BOT_APP_ID }}
+          private-key: ${{ secrets.ILM_PROJECT_BOT_PRIVATE_KEY }}
+          owner: OmniTrustILM
+          repositories: ${{ github.event.repository.name }}
+
+      # Broad token — spans all installation repos. Only needed for
+      # version-propagation, which reads the PARENT issue (may live in
+      # a different repo than the child).
+      - name: Generate App token (broad, for version-propagation)
+        if: github.event.action == 'opened'
+        uses: actions/create-github-app-token@v1
+        id: token-broad
+        with:
+          app-id: ${{ secrets.ILM_PROJECT_BOT_APP_ID }}
+          private-key: ${{ secrets.ILM_PROJECT_BOT_PRIVATE_KEY }}
+          owner: OmniTrustILM
+
+      - name: Add to project
+        if: github.event.action == 'opened'
+        uses: OmniTrustILM/.github/.github/actions/auto-add-to-project@issue-automation-v1
+        with:
+          github-token: ${{ steps.token-narrow.outputs.token }}
+
+      - name: Set fields from form
+        if: ${{ !cancelled() && github.event.action == 'opened' }}
+        uses: OmniTrustILM/.github/.github/actions/auto-set-fields-from-form@issue-automation-v1
+        with:
+          github-token: ${{ steps.token-narrow.outputs.token }}
+
+      - name: Propagate fields from parent
+        if: ${{ !cancelled() && github.event.action == 'opened' }}
+        uses: OmniTrustILM/.github/.github/actions/version-propagation@issue-automation-v1
+        with:
+          github-token: ${{ steps.token-broad.outputs.token }}
+
+      - name: Post reopen comment and clear Reopen Reason
+        if: github.event.action == 'reopened'
+        uses: OmniTrustILM/.github/.github/actions/reopen-tracking@issue-automation-v1
+        with:
+          github-token: ${{ steps.token-narrow.outputs.token }}
