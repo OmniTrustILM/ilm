@@ -70,22 +70,11 @@ You can also write any additional information you find relevant.
 
 ### Vulnerability
 
-You can create a **Vulnerability** issue in case you believe that the vulnerability has been introduced in the platform. Our development process consists of automated vulnerability management, including dependency checks, static analysis of the code, and penetration testing. We are using the most common CVE databases and monitoring CVEs through the [CVE Radar](https://www.cveradar.com/) tool.
+**Do not report an undisclosed vulnerability in a public issue.** Report it privately: open the **Security** tab of the affected repository and choose **Report a vulnerability**, or email [ilm@omnitrust.com](mailto:ilm@omnitrust.com). The [security policy](https://github.com/OmniTrustILM/.github/blob/main/SECURITY.md) describes what to include, when to expect a reply, and how disclosure is coordinated.
 
-When opening a new **Vulnerability** issue, please use the following template to provide relevant information:
-```
-**Describe the vulnerability**
-A clear and concise description of the vulnerability or security issue.
+The **Vulnerability** issue template is for vulnerabilities that are already public, such as a CVE raised by dependency or container image scanning.
 
-**Affected components**
-- Component / Version:
-
-**Link to the CVE description**
-Link or any further information on the vulnerability, consisting the impact and recommended actions to mitigate.
-
-**Additional context**
-Add any other context about the problem here.
-```
+Our development process includes automated vulnerability management: dependency checks, static analysis of the code, and penetration testing. We use the most common CVE databases and monitor CVEs through the [CVE Radar](https://www.cveradar.com/) tool.
 
 ## Commit rules
 

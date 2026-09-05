@@ -4,8 +4,7 @@
 
 ILM (Identity Lifecycle Management) is a platform for effective and efficient trust lifecycle management for companies of any size and individuals. One of its goals is to provide an easy and affordable way to secure digital communication and support information security in more and more connected world.
 
-ILM is released as a commercial open source project under the [MIT License](LICENSE.md).
-Additional features and services are available under subscription plans. If you are interested in subscription, please contact us through [OmniTrust Official Web](https://www.omnitrust.com) or use the [ILM Official email address](mailto:ilm@omnitrust.com) email address.
+ILM is open source software, released under the [MIT License](LICENSE.md).
 
 ILM is designed and developed by a team of PKI and information security enthusiasts with practical point of view on the certificate management in hybrid environments. PKI is the backbone of security in our daily communication and its security and easy management should be available to everyone.
 
@@ -110,8 +109,10 @@ Components in the platform act as microservices and the main approach is to keep
 
 ## Contribution
 
-Anyone can contribute to ILM and we would be happy to support you in that. See [Contribution Guide](CONTRIBUTING.md) for more information.
+Anyone can contribute to ILM and we would be happy to support you in that. See the [Contribution Guide](CONTRIBUTING.md) for more information.
+
+The project is run by its [maintainers](MAINTAINERS.md) under a published [governance model](GOVERNANCE.md), which describes how contributors become maintainers and how decisions are made.
 
 ## License
 
-The ILM platform is released under the [MIT License](LICENSE.md). Some connectors and user interfaces are released under their own licenses or subscriptions. Consult with us for more information.
+The ILM platform is released under the [MIT License](LICENSE.md). Each repository states its own license.
