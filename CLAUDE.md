@@ -10,6 +10,8 @@ This is the **meta-repository** for the ILM (Identity Lifecycle Management) plat
 
 - `README.md` — Platform overview, feature list, and links to all component repositories
 - `CONTRIBUTING.md` — Contribution guidelines, commit conventions, and development process
+- `MAINTAINERS.md` — Platform maintainers; the roster mirrors the `maintainers*` teams in the GitHub organization
+- `GOVERNANCE.md` — Maintainer responsibilities, appointment, inactivity, removal, decision making, and voting thresholds
 - `LICENSE.md` — MIT License
 - `logo/` — OmniTrust ILM logo SVGs
 - `icon/` — OmniTrust ILM icon SVGs
@@ -37,7 +39,7 @@ ILM is a microservices-based trust lifecycle management platform. Key component 
 - **Connectors** — `ejbca-ng-connector`, `hashicorp-vault-connector`, `common-credential-provider`, discovery providers, cryptography providers, etc.
 - **helm-charts** — Kubernetes deployment
 
-The technology stack across the platform is primarily Java/Spring Boot (backend) and React (frontend).
+The technology stack is mixed: Java/Spring Boot for `core`, `interfaces` and `scheduler`; Go for the CLI, SDK, `operator` and `proxy`; C# for `auth`; and TypeScript/React for the `fe-*` web interfaces. Connectors and providers are written in Go, Java, Kotlin, C# or Python.
 
 ## External Resources
 
