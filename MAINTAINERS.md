@@ -17,6 +17,8 @@ repository.
 | Karol Hrdina | [@karolhrdina](https://github.com/karolhrdina) | OmniTrust | Go |
 | Klara Ficova | [@klaraf755](https://github.com/klaraf755) | OmniTrust | Core |
 | Lubomir Wassermann | [@lubomirw](https://github.com/lubomirw) | OmniTrust | Core, Go, Infrastructure, UI |
+| Lukas Najman | [@LukasNajman](https://github.com/LukasNajman) | Cloudfield | Core |
+| Max Soloviov | [@soloviovmax](https://github.com/soloviovmax) | Keenethics | UI |
 | Michal Vyskocil | [@vyskocilm](https://github.com/vyskocilm) | OmniTrust | Go |
 | Roman Cinkais | [@3keyroman](https://github.com/3keyroman) | OmniTrust | Core, Infrastructure |
 
