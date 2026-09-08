@@ -4,7 +4,7 @@
 
 ILM (Identity Lifecycle Management) is a platform for effective and efficient trust lifecycle management for companies of any size and individuals. One of its goals is to provide an easy and affordable way to secure digital communication and support information security in more and more connected world.
 
-ILM is open source software, released under the [MIT License](LICENSE.md).
+ILM is open source software, released under the [Apache License 2.0](LICENSE.md).
 
 ILM is designed and developed by a team of PKI and information security enthusiasts with practical point of view on the certificate management in hybrid environments. PKI is the backbone of security in our daily communication and its security and easy management should be available to everyone.
 
@@ -115,4 +115,4 @@ The project is run by its [maintainers](MAINTAINERS.md) under a published [gover
 
 ## License
 
-The ILM platform is released under the [MIT License](LICENSE.md). Each repository states its own license.
+The ILM platform is released under the [Apache License 2.0](LICENSE.md). Each repository states its own license.
