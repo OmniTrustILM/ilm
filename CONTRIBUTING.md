@@ -1,126 +1,17 @@
 # Contributing to ILM
 
-We encourage everyone to make contributions to the ILM platform. You can be a part of the community and improving the security of the internet. Your contribution is important to enhance the platform and make it more affordable and available for all of us using digital certificate.
+The contribution process is the same across every repository of the
+[OmniTrustILM](https://github.com/OmniTrustILM) organization and is maintained in one place:
 
-We use [GitHub](https://github.com/) to manage the ILM project and all source codes, including tracking issues.
+**[Contribution guide](https://github.com/OmniTrustILM/.github/blob/main/CONTRIBUTING.md)**
 
-## Source code management
+It covers the branching strategy, the shared issue templates, signing off your commits with
+`git commit -s`, the commit format, and how to report a vulnerability. Read it before opening
+your first pull request.
 
-[GitHub](https://github.com/) is used as version control system.
-We use [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) as our branching strategy. Feature branches are created from `main`, and merged back via pull requests after review.
+Some repositories add their own `CONTRIBUTING.md` with build and test instructions for that
+component; where one exists it supplements the guide above rather than replacing it.
 
-## Issues
-
-All issues are managed in respective [GitHub](https://github.com/) repositories.
-We are using pre-defined issue templates and proper labelling to benefit from the automation process of assigning the issues to the right team and to generate the proper reports. Therefore each issue should be labelled with the appropriate labels.
-
-### Feature
-
-Your are welcome to enhance the platform by adding new features. You can crate a pull request with the new feature. Do not forget to look into the list of current issues to find out of the feature is already implemented or someone is working on it. If you would like to discuss the feature, please create a new **Feature** issue.
-
-For new **Feature** issue, please describe at least the following:
-```
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
-```
-
-### Bug
-
-If you believe that the platform does not behave correctly and you have found a bug, you can create a **Bug** issue. Please do not forget to look into the list of current issues to find out if the bug is already fixed or someone is working on it.
-
-When opening a new **Bug** issue, please use the following template to provide relevant information:
-```
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Environment (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
-
-**Affected versions and components**
-A clear and concise description of the affected versions and components.
-```
-You can also write any additional information you find relevant.
-
-### Vulnerability
-
-**Do not report an undisclosed vulnerability in a public issue.** Report it privately: open the **Security** tab of the affected repository and choose **Report a vulnerability**, or email [ilm@omnitrust.com](mailto:ilm@omnitrust.com). The [security policy](https://github.com/OmniTrustILM/.github/blob/main/SECURITY.md) describes what to include, when to expect a reply, and how disclosure is coordinated.
-
-The **Vulnerability** issue template is for vulnerabilities that are already public, such as a CVE raised by dependency or container image scanning.
-
-Our development process includes automated vulnerability management: dependency checks, static analysis of the code, and penetration testing. We use the most common CVE databases and monitor CVEs through the [CVE Radar](https://www.cveradar.com/) tool.
-
-## Commit rules
-
-- Commit Related Changes
-- Commit Often
-- Don't Commit Half-Done Work
-- Test Your Code Before You Commit
-- Write Good Commit Messages
-- Use Branches
-- Always Link Commits
-
-### Commit format
-
-- Capitalized, short (50 chars or less) summary
-- More detailed explanatory text, if necessary. Wrap it to about 72 characters. In some contexts, the first line is treated as the subject of an email and the rest of the text as the body. The blank line separating the summary from the body is critical (unless you omit the body entirely); tools like rebase can get confused if you run the two together.
-- Always leave the second line blank.
-- Write your commit message in the imperative: "Fix bug" and not "Fixed bug" or "Fixes bug." This convention matches up with commit messages generated by commands like git merge and git revert.
-- Further paragraphs come after blank lines. 
-  - Bullet points are okay, too
-  - Typically a hyphen or asterisk is used for the bullet, preceded by a single space, with blank lines in between, but conventions vary here
-  - Use a hanging indent
-
-### Commit template
-
-```
-[Capitalized, short (50 chars or less) summary]
-
-[More detailed explanatory text, if necessary. Wrap it to about 72 characters]
-
-Link: [GitHub Issue]
-```
-
-## IDE
-
-For all development tasks, we prefer:
-- [JetBrains](https://www.jetbrains.com/) IDE (IntelliJ IDEA, WebStorm, PyCharm, etc.)
-- [Eclipse](https://www.eclipse.org/) IDE
-- [Visual Studio Code](https://code.visualstudio.com/) editor
-
-## Development process in steps
-
-The following steps should be generally followed for all development tasks:
-1. Clone or fork the repo and create your branch
-2. Add your code to the branch
-3. Prepare tests for your code (if needed)
-4. Make sure that your code is written according the conventions
-5. Ensure that your code builds and tests pass
-6. Do not commit files and folder not related to the code
-7. Create a pull request
+This repository carries project-level documentation and branding assets rather than application
+code — see the [README](README.md), [MAINTAINERS.md](MAINTAINERS.md) and
+[GOVERNANCE.md](GOVERNANCE.md).
