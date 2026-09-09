@@ -12,7 +12,7 @@ This is the **meta-repository** for the ILM (Identity Lifecycle Management) plat
 - `CONTRIBUTING.md` — Contribution guidelines, commit conventions, and development process
 - `MAINTAINERS.md` — Platform maintainers; the roster mirrors the `maintainers*` teams in the GitHub organization
 - `GOVERNANCE.md` — Maintainer responsibilities, appointment, inactivity, removal, decision making, and voting thresholds
-- `LICENSE.md` — MIT License
+- `LICENSE.md` — Apache License 2.0
 - `logo/` — OmniTrust ILM logo SVGs
 - `icon/` — OmniTrust ILM icon SVGs
 
