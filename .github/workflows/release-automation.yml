@@ -24,7 +24,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Generate App token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v3
         id: app-token
         with:
           app-id: ${{ secrets.ILM_PROJECT_BOT_APP_ID }}
