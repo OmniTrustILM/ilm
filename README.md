@@ -113,6 +113,8 @@ Anyone can contribute to ILM and we would be happy to support you in that. See t
 
 The project is run by its [maintainers](MAINTAINERS.md) under a published [governance model](GOVERNANCE.md), which describes how contributors become maintainers and how decisions are made.
 
+Organizations using ILM are recorded in [ADOPTERS.md](ADOPTERS.md), which also explains how to add your own.
+
 ## License
 
 The ILM platform is released under the [Apache License 2.0](LICENSE.md). Each repository states its own license.
